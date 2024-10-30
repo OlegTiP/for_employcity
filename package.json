@@ -1,0 +1,16 @@
+{
+  "name": "employcity",
+  "version": "1.0.0",
+  "main": "jquery.js",
+  "scripts": {
+    "sass:watch": "node-sass --output-style compressed --watch src/scss -o src/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "sass": "^1.80.5"
+  }
+}
