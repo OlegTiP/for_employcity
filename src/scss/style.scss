@@ -90,6 +90,7 @@ body {
 
 .header {
    @media (max-width: $sm-tablet) {
+      padding: 15px 0;
      font-size: 24px;
     }
   padding: 33.5px 0;
@@ -102,10 +103,12 @@ body {
   z-index: 1;
 
   &__burger {
+   padding: 10px 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
     cursor: pointer;
+    z-index: 30;
 
     @media (max-width: $tablet) {
       display: flex;
@@ -117,7 +120,7 @@ body {
       display: block;
       width: 40px;
       height: 4px;
-      background: $white;
+      background: #bbbbbb;
       transition: transform 0.2s ease-in-out;
     }
   }
@@ -147,6 +150,10 @@ body {
   }
 
   &__logo {
+   @media (max-width: $sm-tablet) {
+      font-size: 24px;
+   }
+
     font-size: 28px;
     font-weight: 800;
     text-transform: uppercase;
@@ -167,7 +174,7 @@ body {
       position: absolute;
       transform: translateX(0);
       left: 0px;
-      z-index: 620;
+      z-index: 20;
       background: #fff;
       top: 0;
       height: auto;
