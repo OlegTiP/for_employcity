@@ -1,0 +1,418 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-wrap: break-word;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1172px;
+  width: 100%;
+}
+
+/* Ширина страницы */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  min-width: 320px;
+}
+
+.btn {
+  padding: 15px 31px;
+  display: inline-block;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #3E9CDC;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #2A2B30;
+  border: 1px solid #6F6D7B;
+}
+.btn--white {
+  color: #2A2B30;
+  background-color: #fff;
+  border: 1px solid #6F6D7B;
+}
+.btn--white:hover {
+  background-color: #3E9CDC;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.title-h2 {
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+}
+.title-h2 span {
+  color: #3E9CDC;
+}
+
+.header {
+  padding: 33.5px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(26, 16, 29, 0.9);
+  color: #fff;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.header__logo {
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+}
+.header__logo span {
+  color: #3E9CDC;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 60px;
+  justify-content: right;
+}
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
+}
+.nav__link.active {
+  color: #3E9CDC;
+}
+.nav__link:hover {
+  text-decoration: none;
+  color: #3E9CDC;
+}
+
+.main {
+  flex: 1;
+}
+
+.promo {
+  padding: 203px 0 202px;
+  background: url("/img/employcity_bg_promo.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.promo__main-title {
+  margin-bottom: 80px;
+  font-size: 48px;
+  font-weight: 700;
+  max-width: 780px;
+  color: #131212;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.promo__main-title span {
+  color: #3E9CDC;
+}
+.promo__title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #131212;
+}
+.promo__lists {
+  margin-bottom: 80px;
+  list-style: "-";
+}
+.promo__list {
+  margin-left: 20px;
+  padding-left: 11px;
+  font-size: 20px;
+  color: #131212;
+}
+.promo__list:not(:last-child) {
+  margin-bottom: 5px;
+}
+.promo__btns {
+  display: flex;
+  gap: 30px;
+}
+
+.order {
+  padding: 121px 151px;
+  background: url("/img/employcity_bg_form.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+.order__title {
+  text-align: center;
+}
+.order__descr {
+  margin: 0 auto;
+  margin-bottom: 80px;
+  max-width: 600px;
+  font-size: 18px;
+  color: #BBBBBB;
+  text-align: center;
+}
+
+.steps {
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px 60px;
+}
+.steps__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.steps__icon {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #3E9CDC;
+  border: 5px solid #286690;
+}
+.steps__text {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.form__block-top {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.form__block-top > :nth-child(4n) {
+  grid-column: 1/-1;
+}
+.form__block-bottom {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 2fr 1fr;
+}
+
+.form__input {
+  padding: 12px 10px;
+  font-size: 18px;
+  color: #272733;
+  border-radius: 4px;
+  border: none;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+}
+.form__input::-moz-placeholder {
+  font-size: 18px;
+  color: #272733;
+}
+.form__input::placeholder {
+  font-size: 18px;
+  color: #272733;
+}
+
+.form__progress-label {
+  font-size: 14px;
+  color: #ccc;
+  text-align: left;
+}
+
+.form__progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.form__progress-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form__slider {
+  width: 100%;
+}
+
+/* Основной стиль для ползунка */
+.form__slider {
+  -webkit-appearance: none; /* Убираем стандартный стиль для WebKit */
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 8px; /* Высота линии */
+  background: #ddd; /* Цвет линии */
+  border-radius: 5px;
+  outline: none;
+  /* Для создания эффекта заполненной части ползунка */
+  background: linear-gradient(to right, #0099ff 75%, #ddd 75%);
+}
+
+/* Стилизация заполняемой части для Firefox */
+.form__slider::-moz-range-progress {
+  background-color: #0099ff; /* Цвет заполненной части */
+}
+
+/* Стилизация для трека (линии) в WebKit */
+.form__slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 5px;
+  background: #ddd;
+}
+
+/* Стилизация для "бегунка" (thumb) в WebKit */
+.form__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px; /* Размер бегунка */
+  height: 24px;
+  background-color: #3E9CDC;
+  border: 3px solid #286690;
+  border-radius: 50%; /* Округление бегунка */
+  cursor: pointer; /* Курсор "рука" при наведении */
+  margin-top: -6px; /* Подстройка вертикального положения бегунка */
+}
+
+/* Стилизация для "бегунка" (thumb) в Firefox */
+.form__slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background-color: #3E9CDC;
+  border: 3px solid #286690;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Стилизация для IE */
+.form__slider::-ms-track {
+  height: 8px;
+  border-radius: 5px;
+  background: #ddd;
+  color: transparent; /* Скрываем линии IE */
+}
+
+/* Стилизация для "бегунка" (thumb) в IE */
+.form__slider::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #0099ff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Псевдокласс для изменения цвета при наведении */
+.form__slider:hover::-webkit-slider-thumb,
+.form__slider:hover::-moz-range-thumb,
+.form__slider:hover::-ms-thumb {
+  background-color: #007acc; /* Цвет при наведении */
+}
+
+.form__progress-value {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.form__file-upload {
+  display: flex;
+  align-items: center;
+}
+
+.form__file-input {
+  display: none;
+}
+
+.form__file-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 2px solid #3E9CDC;
+  width: 100%;
+  text-align: center;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+.form__file-label:hover {
+  background-color: #3E9CDC;
+  color: #fff;
+}
+.form__file-label:hover svg path {
+  fill: #fff;
+}
+.form__file-label svg path {
+  fill: #131212;
+  transition: fill 0.3s ease-in-out;
+}
+
+.form__submit {
+  align-self: center;
+  min-width: 370px;
+}
+
+.section__title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section__text {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer__text {
+  font-size: 16px;
+}
